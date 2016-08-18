@@ -20,6 +20,7 @@ var toRoman = function(num) {
     var romanNumeral = [];
     var result = romanNumeral.join("");
 
+    // NUMBERS IN THOUSANDS
     if (testNum.length === 4) {
       console.log(testNum.length);
 
@@ -29,37 +30,44 @@ var toRoman = function(num) {
           romanNumeral.push(romanValThou[m]);
         }
       }
-
       for (var c = 0; c < romanValHundreds.length; c++) {
         if (testNum[1] == c) {
           romanNumeral.push(romanValHundreds[c]);
         }
       }
-
       for (var d = 0; d < romanValTens.length; d++) {
         if (testNum[2] == d) {
           romanNumeral.push(romanValTens[d]);
         }
       }
-
       for (var u = 0; u < romanValOnes.length; u++) {
         if (testNum[3] == u) {
           romanNumeral.push(romanValOnes[u]);
         }
       }
-
-      console.log(romanNumeral);
-
     }
+    // NUMBERS IN HUNDREDS
     else if (testNum.length === 3) {
       console.log(testNum.length);
-      for (var i = 0; i < romanValHundreds.length; i++) {
-        if (testNum[0] == i) {
-          console.log(romanValHundreds[i]);
 
+      for (var c = 0; c < romanValHundreds.length; c++) {
+        if (testNum[0] == c) {
+          romanNumeral.push(romanValHundreds[c]);
         }
       }
+      for (var d = 0; d < romanValTens.length; d++) {
+        if (testNum[1] == d) {
+          romanNumeral.push(romanValTens[d]);
+        }
+      }
+      for (var u = 0; u < romanValOnes.length; u++) {
+        if (testNum[2] == u) {
+          romanNumeral.push(romanValOnes[u]);
+        }
+      }
+      console.log(romanNumeral);
     }
+    
     else if (testNum.length === 2) {
       console.log(testNum.length);
       for (var i = 0; i < romanValTens.length; i++) {
