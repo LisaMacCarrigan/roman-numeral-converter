@@ -8,6 +8,8 @@
 
 This is an application that converts a user's numeric input into Roman numerals using conditional logic.
 
+The Roman numeral system separates ones, tens, hundreds and thousands, so the program takes the numeric input and identifies the closest of the seven initial Roman numeral values it falls near.
+
 ## Specifications
 
 #### 1. Do nothing to non-numeric (i.e. letters and special characters) input.
@@ -15,49 +17,43 @@ This is an application that converts a user's numeric input into Roman numerals 
 * Example Input: "a" or "!"
 * Example Output: "Please enter a number"
 
-#### 2. Do nothing to numbers higher than 3,999.
+#### 2. Do nothing to 0.
+
+* Example Input: 0
+* Example Output: "Please enter a number greater than 0"
+
+#### 3. Do nothing to numbers higher than 3,999.
 
 * Example Input: 4,000
 * Example Output: "You cannot count higher than 3,999 in Roman numerals. Please re-enter a number."
 
-#### 3. Each individual Roman numeral symbol has an absolute defined value.
+#### 4. Each individual Roman numeral symbol has an absolute defined value.
 
 * Example: 1 = I; 5 = V; 10 = X; 50 = L; 100 = C; 500 = D; 1000 = M
 
-#### 4. The Roman numeral system separates ones, tens, hundreds and thousands, so the program takes the numeric input and identifies the closest of the seven initial Roman numeral values it falls near.
+#### 5. Add the value of all the symbols to get the desired input number.
 
-* Example Input: 99
-* Example Output: XCIX - because 99 is closest to 100 (i.e. C)
+* Example Input: 2
+* Example Output: II
 
-#### 5. Find the difference between the input value and the closest initial value.
+#### 6. If more than three of the same Roman numeral symbol are needed, then find the difference between the input value and the closest proceeding Roman numeral value. When there are more than three of the same roman numeral symbol in a row, subtract added initial Roman symbols and add proceeding Roman symbol instead
 
-* Example Input: 4
-* Example Output: IV - (5 - 4 = 1)
+* Example Input #1: 4
+* Example Output #1: IV - (5 - 4 = 1)
+* Example Input #2: 9
+* Example Output #2: IX - (10 - 9 = 1)
 
-#### 6. Determine the preceding value is closest if the input's difference between the preceding and proceeding value is equal
-
-* Example Input: 3
-* Example Output: III - (Difference between 3 and 5 = 2 and difference between 3 and 1 = 2)
-
-#### 7. Add 
+#### 7. Determine the preceding value is closest if the input's difference between the preceding and proceeding value is equal. When this occurs, use preceding Roman numeral symbol.
 
 * Example Input: 3
 * Example Output: III - (Difference between 3 and 5 = 2 and difference between 3 and 1 = 2)
 
-#### 6. There may not be more than three of the same characters in a row. When there are more than three of the same characters in a row, you SWITCH TO SUBTRACTION (ex: IIII for 4, you write IV (for 5 minus 1)).
+#### 8. Deal with addition, like when you have the number 6 or 7.
 
-A
-
-Separate ones, tens, hundreds, and thousands. 99 is XCIX, not IC.
-
-*
-
-
-
-
-
-
-
+* Example Input #1: 6
+* Example Output #1: VI
+* Example Input #2: 7
+* Example Output #2: VII
 
 ## Setup/Installation Requirements
 

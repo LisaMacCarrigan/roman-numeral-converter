@@ -3,16 +3,18 @@ $(document).ready(function() {
 var romanSymbols = ["I", "V", "X", "L", "C", "D", "M"];
 var romanValues = [1, 5, 10, 50, 100, 500, 1000];
 
+var toRoman = function(number) {
+  
 
-
+}
 
 
 // User Interface Logic
-  $("#userInfo").submit(function(event){
+  $("#user-number").submit(function(event){
     event.preventDefault();
     //grab user input
-    var sentence = $("#userSentence").val();
-    $("#translatedSentence").text("");
-    toPigLatin(sentence);
+    var number = parseInt($("#input-number").val());
+    $("#converted-number").text("");
+    toRoman(number);
   });
 });
