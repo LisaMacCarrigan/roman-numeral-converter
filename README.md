@@ -8,7 +8,7 @@
 
 This is an application that converts a user's numeric input into Roman numerals using conditional logic.
 
-The Roman numeral system separates ones, tens, hundreds and thousands, so the program takes the numeric input and identifies the closest of the seven initial Roman numeral values it falls near.
+The Roman numeral system separates ones, tenths, hundredths, and thousandths, so the program approaches inputted numbers similarly.
 
 ## Specifications
 
