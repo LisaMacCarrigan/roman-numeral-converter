@@ -17,65 +17,25 @@ var toRoman = function(num) {
   else {
     // NUMBERS IN THOUSANDS
     if (testNum.length === 4) {
-      for (var m = 0; m < romanValThou.length; m++) {
-        if (testNum[0] == m) {
-          romanNumeral.push(romanValThou[m]);
-        }
-      }
-      for (var c = 0; c < romanValHundreds.length; c++) {
-        if (testNum[1] == c) {
-          romanNumeral.push(romanValHundreds[c]);
-        }
-      }
-      for (var d = 0; d < romanValTens.length; d++) {
-        if (testNum[2] == d) {
-          romanNumeral.push(romanValTens[d]);
-        }
-      }
-      for (var u = 0; u < romanValOnes.length; u++) {
-        if (testNum[3] == u) {
-          romanNumeral.push(romanValOnes[u]);
-        }
-      }
+      romanNumeral.push(romanValThou[testNum[0]]);
+      romanNumeral.push(romanValHundreds[testNum[1]]);
+      romanNumeral.push(romanValTens[testNum[2]]);
+      romanNumeral.push(romanValOnes[testNum[3]]);
     }
     // NUMBERS IN HUNDREDS
     else if (testNum.length === 3) {
-      for (var c = 0; c < romanValHundreds.length; c++) {
-        if (testNum[0] == c) {
-          romanNumeral.push(romanValHundreds[c]);
-        }
-      }
-      for (var d = 0; d < romanValTens.length; d++) {
-        if (testNum[1] == d) {
-          romanNumeral.push(romanValTens[d]);
-        }
-      }
-      for (var u = 0; u < romanValOnes.length; u++) {
-        if (testNum[2] == u) {
-          romanNumeral.push(romanValOnes[u]);
-        }
-      }
+      romanNumeral.push(romanValHundreds[testNum[0]]);
+      romanNumeral.push(romanValTens[testNum[1]]);
+      romanNumeral.push(romanValOnes[testNum[2]]);
     }
     // NUMBERS IN TENS
     else if (testNum.length === 2) {
-      for (var d = 0; d < romanValTens.length; d++) {
-        if (testNum[0] == d) {
-          romanNumeral.push(romanValTens[d]);
-        }
-      }
-      for (var u = 0; u < romanValOnes.length; u++) {
-        if (testNum[1] == u) {
-          romanNumeral.push(romanValOnes[u]);
-        }
-      }
+      romanNumeral.push(romanValTens[testNum[0]]);
+      romanNumeral.push(romanValOnes[testNum[1]]);
     }
     // NUMBERS IN ONES
     else if (testNum.length === 1) {
-      for (var u = 0; u < romanValOnes.length; u++) {
-        if (testNum[0] == u) {
-          romanNumeral.push(romanValOnes[u]);
-        }
-      }
+      romanNumeral.push(romanValOnes[testNum[0]]);
     }
 
     var result = romanNumeral.join("");
