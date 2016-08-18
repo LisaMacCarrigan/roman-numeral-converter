@@ -67,15 +67,21 @@ var toRoman = function(num) {
       }
       console.log(romanNumeral);
     }
-    
+    // NUMBERS IN TENS
     else if (testNum.length === 2) {
       console.log(testNum.length);
-      for (var i = 0; i < romanValTens.length; i++) {
-        if (testNum[0] == i) {
-          console.log(romanValTens[i]);
 
+      for (var d = 0; d < romanValTens.length; d++) {
+        if (testNum[0] == d) {
+          romanNumeral.push(romanValTens[d]);
         }
       }
+      for (var u = 0; u < romanValOnes.length; u++) {
+        if (testNum[1] == u) {
+          romanNumeral.push(romanValOnes[u]);
+        }
+      }
+      console.log(romanNumeral);
     }
     else if (testNum.length === 1) {
       console.log(testNum.length);
