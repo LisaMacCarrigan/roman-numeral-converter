@@ -13,33 +13,27 @@ var toRoman = function(num) {
     }
     else {
 
-      var numComp1 = romanValues[0] - num;
-      var numComp5 = romanValues[1] - num;
-      var numComp10 = romanValues[2] - num;
-      var numComp50 = romanValues[3] - num;
-      var numComp100 = romanValues[4] - num;
-      var numComp500 = romanValues[5] - num;
-      var numComp1000 = romanValues[6] - num;
-
       // Each individual Roman numeral symbol has an absolute defined value.
       for (var i = 0; i < romanValues.length; i++) {
+        
+        var numCompsArr = [numComp1, numComp5, numComp10, numComp50, numComp100, numComp500, numComp1000];
+        var numComp1 = romanValues[0] - num;
+        var numComp5 = romanValues[1] - num;
+        var numComp10 = romanValues[2] - num;
+        var numComp50 = romanValues[3] - num;
+        var numComp100 = romanValues[4] - num;
+        var numComp500 = romanValues[5] - num;
+        var numComp1000 = romanValues[6] - num;
+
         if (num === romanValues[i]) {
           console.log(romanSymbols[i]);
         }
+        // Add the value of all the symbols to get the desired input number
         else if (num >= romanValues[0] && num <= romanValues[1]) {
           console.log(numComp5);
         }
       }
 
-      var numComp1 = romanValues[0] - num;
-      var numComp5 = romanValues[1] - num;
-      var numComp10 = romanValues[2] - num;
-      var numComp50 = romanValues[3] - num;
-      var numComp100 = romanValues[4] - num;
-      var numComp500 = romanValues[5] - num;
-      var numComp1000 = romanValues[6] - num;
-
-      var numCompsArr = [numComp1, numComp5, numComp10, numComp50, numComp100, numComp500, numComp1000];
       numCompsArr.sort();
       console.log(numCompsArr);
 
