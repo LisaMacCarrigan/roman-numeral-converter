@@ -83,16 +83,15 @@ var toRoman = function(num) {
       }
       console.log(romanNumeral);
     }
+    // NUMBERS IN ONES
     else if (testNum.length === 1) {
       console.log(testNum.length);
-      for (var i = 0; i < romanValOnes.length; i++) {
-        if (testNum == i) {
-          console.log(romanValOnes[i]);
-          // num.toString();
-          // num = romanValOnes[i];
-          // return num;
+      for (var u = 0; u < romanValOnes.length; u++) {
+        if (testNum[0] == u) {
+          romanNumeral.push(romanValOnes[u]);
         }
       }
+      console.log(romanNumeral);
     }
     else {
       console.log("Your number is too large.")
